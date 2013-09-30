@@ -26,7 +26,7 @@ namespace Dypsok
 
         public void RegisterSubscription(ProductId Id, IEnumerable<FareZone> FareZones, PaymentSchedule Schedule)
         {
-            Guard.That<PaymentScheduleRequiredException>(Schedule != PaymentSchedule.Empty);
+            Guard.With<PaymentScheduleRequiredException>(Schedule != PaymentSchedule.Empty);
             RegisterProduct(Id, FareZones);
         }
     }

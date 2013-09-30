@@ -7,7 +7,7 @@ namespace Dypsok
 {
     static class Guard
     {
-        public static void That<TException>(bool Assertion) where TException:Exception,new()
+        public static void With<TException>(bool Assertion) where TException:Exception,new()
         {
             if (!Assertion) throw new TException();
         }
